@@ -24,7 +24,13 @@ mongoose.connect(process.env.MONGODB_URL, () => {
   console.log("CONNECTED TO MONGODB");
 });
 
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "http://localhost:3000,https://flower-garden-ioeqcb7fi-chivas277.vercel.app/",
+    ],
+  })
+);
 app.use(cookieParser());
 app.use(express.json());
 
