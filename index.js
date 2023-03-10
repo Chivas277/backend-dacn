@@ -7,7 +7,7 @@ const authRoute = require("./routes/auth");
 const userRoute = require("./routes/user");
 const productRoute = require("./routes/product");
 const cartRoute = require("./routes/cart");
-const orderRoute = require("./routes/order");
+
 const stripeRoute = require("./routes/stripe");
 const cateRoute = require("./routes/category");
 //const { use } = require("./routes/auth");
@@ -27,7 +27,7 @@ mongoose.connect(process.env.MONGODB_URL, () => {
 app.use(
   cors({
     origin: [
-      "http://localhost:3000,https://flower-garden-ioeqcb7fi-chivas277.vercel.app/",
+      "http://localhost:3000,https://flor-garden-ioeqcb7fi-chivas277.vercel.app/",
     ],
   })
 );
